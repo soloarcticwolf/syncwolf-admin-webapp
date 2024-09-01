@@ -1,16 +1,13 @@
+'use client'
+
 import Link from 'next/link'
+import { LINK_SIGNIN, LINK_SIGNOUT } from './constants/links.constants'
 
 export default function Home() {
 	return (
-		<main>
-			<h1>
-				home page , give users option to visit the respective page they want to
-				go. superusers, employees
-				<div>
-					<Link href={'/pages/login'}>Login</Link>
-					<Link href={'/pages/dashboard'}>Dashboard</Link>
-				</div>
-			</h1>
-		</main>
+		<>
+			<Link href={LINK_SIGNIN}>Signin</Link>
+			<Link href={LINK_SIGNOUT}>Sign out</Link>
+		</>
 	)
 }
